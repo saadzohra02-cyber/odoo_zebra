@@ -3,8 +3,9 @@
 ## 1. إنشاء الهيكل الأساسي للمشروع
 
 ``` bash
-mkdir -p ~/مستقل/odoo_zebra_label/odoo-test/addons/odoo_zebra_label
-cd ~/مستقل/odoo_zebra_label
+# إنشاء المسار الجديد
+mkdir -p /home/achraf/odoo_zebra/{addons/odoo_zebra_label/{data,report},docker-compose}
+cd /home/achraf/odoo_zebra
 ```
 
 ## 2. إنشاء ملف Docker Compose
@@ -201,7 +202,7 @@ EOF
 ### تشغيل الحاويات
 
 ``` bash
-cd ~/مستقل/odoo_zebra_label/odoo-test
+cd /home/achraf/odoo_zebra/docker-compose
 docker-compose up -d
 ```
 
