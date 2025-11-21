@@ -215,7 +215,7 @@ docker-compose logs -f web
 ### الوصول للتطبيق
 
 افتح المتصفح واذهب إلى:\
-[http://localhost:8069](http://localhost:8070)
+[http://localhost:8070](http://localhost:8070)
 
 ------------------------------------------------------------------------
 
