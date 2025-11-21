@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <!-- Main Professional Label Report -->
+        <report
+            id="action_zebra_pro_label"
+            string="🏷️ Zebra Professional Label"
+            model="product.product"
+            report_type="qweb-pdf"
+            name="odoo_zebra_label.zebra_label_template"
+            file="odoo_zebra_label.zebra_label_template"
+            print_report_name="'PRO_LABEL_%s_%s' % (object.default_code or 'NO_REF', datetime.now().strftime('%Y%m%d'))"
+            paperformat="odoo_zebra_label.paperformat_zebra_pro"
+            attachment_use="True"
+            attachment="'(%s)_Professional_Label.pdf' % (object.default_code or object.name.replace(' ', '_'))"
+            groups="base.group_user,stock.group_stock_user,stock.group_stock_manager"
+        />
+
+        <!-- Batch Label Printing Report -->
+        <report
+            id="action_batch_labels"
+            string="📦 Batch Product Labels"
+            model="product.product"
+            report_type="qweb-pdf"
+            name="odoo_zebra_label.zebra_label_template"
+            file="odoo_zebra_label.zebra_label_template"
+            print_report_name="'BATCH_LABELS_%s' % (datetime.now().strftime('%Y%m%d_%H%M'))"
+            paperformat="odoo_zebra_label.paperformat_zebra_pro"
+            attachment_use="True"
+            attachment="'Batch_Labels_%s.pdf' % (datetime.now().strftime('%Y%m%d'))"
+            groups="stock.group_stock_manager"
+        />
+
+        <!-- Express Label Report -->
+        <report
+            id="action_express_label"
+            string="⚡ Express Label"
+            model="product.product"
+            report_type="qweb-pdf"
+            name="odoo_zebra_label.zebra_label_template"
+            file="odoo_zebra_label.zebra_label_template"
+            print_report_name="'EXPRESS_%s' % (object.default_code or object.name)"
+            paperformat="odoo_zebra_label.paperformat_zebra_pro"
+            attachment_use="False"
+            groups="base.group_user"
+        />
+    </data>
+</odoo>
