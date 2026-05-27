@@ -1,5 +1,4 @@
-# دليل إعداد مشروع   Odoo Zebra Label
-
+# Odoo Zebra Label Project Setup Guide
 ## 1. إنشاء الهيكل الأساسي للمشروع
 
 ``` bash
